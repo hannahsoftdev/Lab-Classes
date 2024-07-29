@@ -1,0 +1,63 @@
+# Student Class
+class Student:
+  def __init__(self, name, id, address):
+    self.name = name
+    self.id = id
+    self.address = address
+
+  def display_student(self):
+    print(f"Name: {self.name}")
+    print(f"ID: {self.id}")
+    print(f"Address: {self.address}")
+
+student1 = Student("Hannah", "12345", "Calgary, AB")
+student1.display_student()
+
+# Circle CLass
+class Circle:
+  def __init__(self, radius):
+    self.radius = radius
+
+  def display_area(self):
+     area = 3.14 * (self.radius ** 2)
+     print(f"The area of the circle is {area}")
+
+  def display_circumference(self):
+    circumference = 3.14 * (self.radius * 2)
+    print(f"The circumference of the circle is {circumference}")
+
+circle1 = Circle(radius=5)
+circle1.display_area()
+circle1.display_circumference()
+
+# Bank Account Class
+class BankAccount:
+  def __init__(self, accountNumber, customerName, balance):
+    self.accountNumber = accountNumber
+    self.customerName = customerName
+    self.balance = balance
+
+  def deposit(self, amount):
+    self.balance += amount
+    print(f"The new balance is {self.balance}")
+
+  def withdraw(self, amount):
+    if self.balance >= amount:
+      self.balance -= amount
+      print(f"The new balance is {self.balance}")
+    else:
+      print("Insufficient funds")
+
+  def display_balance(self):
+    print(f"The balance is {self.balance}")
+
+  def display_account_info(self):
+    print(f"Account Number: {self.accountNumber}")
+    print(f"Customer Name: {self.customerName}")
+    print(f"Balance: {self.balance}")
+
+customer1 = BankAccount(accountNumber="123456789", customerName="Hannah", balance=1000)
+customer1.deposit(amount=500)
+customer1.withdraw(amount=200)
+customer1.display_balance()
+customer1.display_account_info()
